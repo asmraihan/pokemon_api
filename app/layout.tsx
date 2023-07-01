@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
+import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -22,7 +23,7 @@ export default function RootLayout({
         <ThemeProvider attribute='class' defaultTheme='dark'>
         <main className="flex min-h-screen flex-col items-center  p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <h2 className='text-2xl font-bold'>Pokemon Stats</h2>
+       <Link href='/'> <h2 className='text-2xl font-bold'>Pokemon Stats</h2></Link>
       </div>
         {children}
         </main>
