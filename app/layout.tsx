@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import Link from 'next/link'
+import { HomeIcon } from 'lucide-react'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -10,7 +11,6 @@ export const metadata = {
 }
 
 // Providers
-
 
 export default function RootLayout({
   children,
@@ -23,7 +23,11 @@ export default function RootLayout({
         <ThemeProvider attribute='class' defaultTheme='dark'>
         <main className="flex min-h-screen flex-col items-center  p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-       <Link href='/'> <h2 className='text-2xl font-bold'>Pokemon Stats</h2></Link>
+       <Link className='flex justify-center items-center gap-2' href='/'>
+        {/* if user in home page show home icon but if user in other pages show arrow left */}
+     
+        
+         <h2 className='text-2xl font-bold'>Pokemon Stats</h2></Link>
       </div>
         {children}
         </main>
